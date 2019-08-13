@@ -48,7 +48,7 @@ for swif, intf in zip (switches, interfaces):
     # seperate the VLAN into digits
     splitvlan = list(str(vlan))
     # first digit of the vlan
-    netvlan = int(splitvlan[0])
+    netvlan = splitvlan[0]
     # second digit of the vlan
     intvlan = int(splitvlan[1])
 
@@ -63,7 +63,7 @@ for swif, intf in zip (switches, interfaces):
         intvlan += 1
 
     # combine both integers
-    newvlan = str(netvlan) + str(intvlan)
+    newvlan = netvlan + str(intvlan)
 
     # send commands
     config_commands = [
