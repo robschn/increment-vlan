@@ -1,0 +1,10 @@
+switch:
+  sw1: 192.168.1.10
+  sw2: 192.168.1.13
+  # sw3: hellosw3
+  # sw4: hellosw4
+interface:
+  int1: Gi1/0/1
+  int2: Gi1/0/21
+  # int3: helloint3
+  # int4: helloint4
