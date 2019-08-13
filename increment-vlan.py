@@ -49,7 +49,7 @@ for swif, intf in zip (switches, interfaces):
     splitvlan = list(str(vlan))
     # first digit of the vlan
     netvlan = splitvlan[0]
-    # second digit of the vlan, changed to an int so we can add to it
+    # second digit of the vlan, change to an int so we can add to it
     intvlan = int(splitvlan[1])
 
     # reset number back to 0
