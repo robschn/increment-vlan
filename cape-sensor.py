@@ -31,7 +31,6 @@ for swif, intf in zip (switches, interfaces):
     net_connect.enable()
 
     # issue show int status
-    print ("Logging in and changing..")
     shvlan = net_connect.send_command("show interface status", use_textfsm=True)
 
     # iterate over the list and grab the dict with intf
