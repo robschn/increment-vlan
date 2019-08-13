@@ -31,7 +31,8 @@ for swif, intf in zip (switches, interfaces):
     'host': swif,
     'username': username,
     'password': password,
-    'device_type': 'cisco_ios'}
+    'device_type': 'cisco_ios'
+    }
     net_connect = Netmiko(**myDevice)
     net_connect.enable()
 
@@ -67,6 +68,7 @@ for swif, intf in zip (switches, interfaces):
     # send commands
     config_commands = [
     'int '+intf,
-    'swi acc vlan '+newvlan]
+    'swi acc vlan '+newvlan
+    ]
 
     net_connect.send_config_set(config_commands)
