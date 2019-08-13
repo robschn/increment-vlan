@@ -3,6 +3,11 @@
 import yaml
 from netmiko import Netmiko
 
+# import username and password
+import creds
+username = creds.login['username']
+password = creds.login['password']
+
 # definitions
 switches = [];
 interfaces = [];
@@ -24,8 +29,8 @@ for swif, intf in zip (switches, interfaces):
     # connect to switch
     myDevice = {
     'host': swif,
-    'username': "admin", # username here
-    'password': "pass123", # password here
+    'username': username,
+    'password': password,
     'device_type': 'cisco_ios'}
     net_connect = Netmiko(**myDevice)
     net_connect.enable()
@@ -45,7 +50,7 @@ for swif, intf in zip (switches, interfaces):
     netvlan = int(splitvlan[0])
     # second digit of the vlan
     intvlan = int(splitvlan[1])
-    
+
     # reset number back to 0
     if intvlan == 9:
         intvlan = 0
