@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Requires Python3, TextFSM, Netmiko and PyYAML
 
 import yaml
