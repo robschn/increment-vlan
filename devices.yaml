@@ -1,5 +1,5 @@
 switch:
-  sw1: 172.21.232.10
+  sw1: 192.168.1.12
   # sw2: 192.168.1.13
   # sw3: hellosw3
   # sw4: hellosw4
